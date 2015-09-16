@@ -1,0 +1,71 @@
+11:45
+
+Think about and draw Database / model
+Read up on Cake conventions for model & database
+Go through Blog Tutorial Cake 
+
+12:30
+
+Create tables in DB, save create script
+Cake bake tables
+
+12:45 - 13:15
+
+( ~~~ Lunch break ~~~ )
+
+13:15
+
+Start over but with Cake 2.7.3... (had set up Cake 3 before)
+Figure out scaffolding / cake bake in 2.7.3
+
+13:45
+
+Generated NewsController and Model objects with cake bake
+(Since I used scaffolding, I was unable to change the viewfiles. Disabled scaffolding in NewsController.)
+
+14:20
+
+Generated AdministratorController to add Login functionality
+Administrator -> model: added validation on fields
+Administrator -> Views: added 'add' + password hashing
+
+15:20
+
+Create loginfilter
+Losing a lot of time with loginfilter --> has something to do with using Administrators instead of Users
+-- solved by adding 
+	'fields' => array(
+        'username' => 'name',
+        'password' => 'password'
+    ),
+    'userModel' => 'Administrator'
+to AppController. "userModel" alone was not enough, username and password needed to be there too
+
+16:20
+
+Add News -> validation and setting the correct administrator
+
+17:20
+
+Clean up Admin Logout - Login
+
+18:00
+
+Display news items as list + make sure embargo doesn't get shown
+(some trouble with query / conditions)
+
+19:00 
+
+Figure out how to do deploy + check in GIT
+
+19:30
+
+Deployed on webserver; clean up 
+
+19:45
+
+See if I can get images working...
+
+20:04
+
+Did not get images to work (time); found out there's loads of plugins for that kind of thing.
